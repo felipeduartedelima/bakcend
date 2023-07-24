@@ -36,3 +36,5 @@ lerna-debug.log*
 
 # JSCPD
 /reports
+# stryker temp files
+.stryker-tmp

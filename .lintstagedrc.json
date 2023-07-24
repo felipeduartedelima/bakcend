@@ -1,5 +1,7 @@
 {
   "*.ts": [
-    
+    "eslint --fix",
+    "npm run jscpd",
+    "npm run test:staged"
   ]
 }
