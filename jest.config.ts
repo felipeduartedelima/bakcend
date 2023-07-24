@@ -8,6 +8,9 @@ export default {
   testMatch: [
     '<rootDir>/**/*.(spec|test).ts',
   ],
+  collectCoverageFrom: [
+    "**/*.(t|j)s"
+  ],
   coverageReporters: [
     'json',
     'text',
