@@ -5,16 +5,18 @@ import {
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
+import { documentationConfig } from './docs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter(),
   );
+
   const config = new DocumentBuilder()
-    .setTitle('Backend')
-    .setDescription('The Backend API description')
-    .setVersion('1.0')
+    .setTitle(documentationConfig.title)
+    .setDescription(documentationConfig.description)
+    .setVersion(documentationConfig.version)
     .addTag('default')
     .build();
   const document = SwaggerModule.createDocument(app, config);
